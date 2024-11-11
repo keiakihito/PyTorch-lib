@@ -195,9 +195,9 @@ def show_images_labels(loader, classes, net, device):
             predicted_name = classes[predicted[i]]
             # Change color if it gets false answer
             if label_name == predicted_name:
-                c = 'k'
+                c = 'k'# Correct prediction, black color
             else:
-                c = 'b'
+                c = 'b'# Incorrect prediction, red color
             ax.set_title(label_name + ':' + predicted_name, c=c, fontsize=20)
         #If net == none, display only correct label
         else:
